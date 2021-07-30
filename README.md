@@ -331,39 +331,105 @@ MESAS <- rbind(HITESMesaTabla,SODIMACMesaTabla)
 ## Análisis estadístico correspondiente
 ##### Se forma el análisis finalmente de los datos estadísticos de acuerdo con Hites e Sodimac, cabe destacar que se hará una comparativa entre los productos, tanto de sofás y Mesas, visualizando si los precios que estos imponen son más accesibles en sus valores, es decir, si son caros o baratos. 
 ### Sofás
-##### Se hará un promedio de valores de cada uno de los elementos en este caso de los sofás (Sillones), correspondientes a ambas páginas. 
+##### Se hará un promedio y sus respectivas desviaciones de valores de cada uno de los elementos en este caso de los sofás (Sillones), correspondientes a ambas páginas. 
 
-#### Promedio sillones de Hites 
-##### De acuerdo al producto de Hites correspondiente a los sofás (sillones), se selecciona la variable para poder tomar la totalidad de los datos y tomar un promedio de estos, para la observación de sus precios finales. 
+#### Promedio Y desviacion estandar de sillones de Hites 
+##### De acuerdo al producto de Hites correspondiente a los sofás (sillones), se seleccionan las variables para poder tomar la totalidad de los datos y tomar un promedio y la desviacion de estos, para la observación de sus precios finales. 
 PromedioSillonHites <- mean(HITESSofaTabla[,2])
 print(paste("El promedio de los sillones en Hites es de", "$",PromedioSillonHites))
+DevSillonHites <- sd(HITESSofaTabla[,2])
+print(paste("La desviación estandar de los sofas de Hites es de",DevSillonHites))
 
-##### Junto a la evaluación del promedio de los sofás, se demuestra que la media de todos los elementos a estudiar corresponde a la empresa del retail Hites es de $829.156 pesos chilenos. 
+##### Junto a la evaluación del promedio de los sofás, se demuestra que la media de todos los elementos a estudiar corresponde a la empresa del retail Hites es de $829.157 aprox. pesos chilenos. Junto a ello se entrega que en este apartado se tiene una desviación estandar de $489.534 aprox. en pesos chilenos.
 
-#### Promedio sillones de Sodimac 
-##### Correspondiente al producto sofás(sillones) en Sodimac, se contempla un promedio de todos los elementos asociados al producto seleccionado. 
+#### Promedio Y desviacion estandar de sillones de Sodimac 
+##### Correspondiente al producto sofás(sillones) en Sodimac, se contempla un promedio y la desviación de todos los elementos asociados al producto seleccionado. 
 PromediosSillonesSodimac <- mean(SODIMACSofaTabla[,2])
 print(paste("El promedio de los sillones en Sodimac es de", "$",PromediosSillonesSodimac))
+DevSillonSodimac <- sd(SODIMACSofaTabla[,2])
+print(paste("La desviación estandar de los sofas de Sodimac es de",DevSillonSodimac))
 
-##### En el presente análisis dependiendo del promedio de la lista de sofás (sillones) de la tienda Sodimac, se pudo recabar que su valor con respecto a la media es de $292.130 pesos chilenos. 
+##### En el presente análisis dependiendo del promedio de la lista de sofás (sillones) de la tienda Sodimac, se pudo recabar que su valor con respecto a la media es de $292.130 pesos chilenos. Junto a ello se entrega que en este apartado se tiene una desviación estandar de $89.579 aprox. en pesos chilenos.
 
 ##### Por consiguiente se encontrará que tienda contiene la valoración más cara y la valoración más barata acorde a los productos de sofá, perteneciente a cada una de las tiendas de estudio. 
 
 SillonCaroBarato <- function(b){
-  ##### Calculando el valor maximo
+  #Calculando el valor maximo
   Maximo <- max(SILLONES[,2])
   #Calculando el valor minimo
   Minimo <- min(SILLONES[,2])
-  ##### Creando variable que almacenara el nombre de la tienda
+  #Creando variable que almacenara el nombre de la tienda
   TiendaCara <- c()
   TiendaBarata <- c()
-  ##### Creando LOOP que buscara la tienda correspondiente al precio más alto
+  #Creando LOOP que buscara la tienda corresdiente al precio mas alto
   for (z in 1:nrow(SILLONES)) {
     if(SILLONES[z,2] == Maximo){
       TiendaCara <- c(TiendaCara,SILLONES[z,3])
     }
   }
-  
+  #Creando LOOP que buscara la tienda correspondiente al precio mas bajo
+  for (y in 1:nrow(SILLONES)) {
+    if(SILLONES[y,2] == Minimo){
+      TiendaBarata <- c(TiendaBarata,SILLONES[y,3])
+    }
+  }
+  print(paste("El sofa más caro en venta en",TiendaCara,"tiene un precio de",Maximo,"CLP"))
+  print(paste("El sofa más barato en venta en",TiendaBarata,"tiene un precio de",Minimo,"CLP"))
+}
+
+##### De esta forma se puede saber que el sofa mas caro se encuentra en Hites a un precio de $2.199.990, mientras que el sofa mas econimico esta presente en Sodimac con un valor de $174.990
+
+### Mesas
+##### Se hará un promedio y sus respectivas desviacion estandar por medio de valores de cada uno de los elementos en este caso de las mesas, correspondientes a ambas páginas. 
+
+#### Promedio Y desviacion estandar de las mesas de Hites 
+##### De acuerdo al producto de Hites correspondiente a los sofás (sillones), se seleccionan las variables para poder tomar la totalidad de los datos y tomar un promedio y la desviacion de estos, para la observación de sus precios finales. 
+PromedioMesasHites <- mean(HITESMesaTabla [,2])
+print(paste("El promedio de los mesas en Hites es de", "$",PromedioMesasHites))
+DevMesasHites <- sd(HITESMesaTabla[,2])
+print(paste("La desviación estandar de los mesas de Hites es de",DevMesasHites))
+
+
+##### Junto a la evaluación del promedio de las mesas, se demuestra que la media de todos los elementos a estudiar corresponde a la empresa del retail Hites es de $216.657 aprox. pesos chilenos. Junto a ello se entrega que en este apartado se tiene una desviación estandar de $108.814 aprox. en pesos chilenos.
+
+#### Promedio Y desviacion estandar de las mesas de Sodimac 
+##### Correspondiente al producto mesas en Sodimac, se contempla un promedio y la desviación de todos los elementos asociados al producto seleccionado. 
+PromediosMesasSodimac <- mean(SODIMACMesaTabla[,2])
+print(paste("El promedio de los mesas en Sodimac es de", "$",PromediosMesasSodimac))
+DevMesasSodimac <- sd(SODIMACMesaTabla[,2])
+print(paste("La desviación estandar de los mesas de Sodimac es de",DevMesasSodimac))
+
+##### En el presente análisis dependiendo del promedio de la lista de mesas de la tienda Sodimac, se pudo recabar que su valor con respecto a la media es de $86.847 pesos chilenos. Junto a ello se entrega que en este apartado se tiene una desviación estandar de $57.395 aprox. en pesos chilenos.
+
+##### Por consiguiente se encontrará que tienda contiene la valoración más cara y la valoración más barata acorde a los productos de sofá, perteneciente a cada una de las tiendas de estudio. 
+
+MesaCaraBarata <- function(c){
+  #Calculando el valor maximo
+  Maximo <- max(MESAS[,2])
+  #Calculando el valor minimo
+  Minimo <- min(MESAS[,2])
+  #Creando variable que almacenara el nombre de la tienda
+  TiendaCara <- c()
+  TiendaBarata <- c()
+  #Creando LOOP que buscara la tienda correspondiente al precio mas alto
+  for (z in 1:nrow(MESAS)) {
+    if(MESAS[z,2] == Maximo){
+      TiendaCara <- c(TiendaCara,MESAS[z,3])
+    }
+  }
+  #Creando LOOP que buscara la tienda correspondiente al precio mas bajo
+  for (y in 1:nrow(MESAS)) {
+    if(MESAS[y,2] == Minimo){
+      TiendaBarata <- c(TiendaBarata,MESAS[y,3])
+    }
+  }
+  print(paste("La mesa más cara en venta en",TiendaCara,"tiene un precio de",Maximo,"CLP"))
+  print(paste("La mesa más barata en venta en",TiendaBarata,"tiene un precio de",Minimo,"CLP"))
+}
+
+
+##### De esta forma se puede saber que la mesa más cara se encuentra en Hites a un precio de $519.990, mientras que el sofa mas econimico esta presente en Sodimac con un valor de $29.990
+
 ## Conclusión
 ##### Ya con todos los analisis efectuados se puden desprender una seguidilla de aseveraciones como forma de conclusión. La primera es que los promedios de los productos mesas de centro y sofas, presentes en la pagina de hites, son en promedio superior a los que se ofrecen en la pagina de la empresa Sodimac, mismo comportamiento que se presento en sus desviaciones estandar respectivas, donde Hites presentava valores en sus precios mucho mas dispersos que en Sodimac.
 ##### Para confirmar lo que se aprecia en el parafo anterior, tambien se tiene presente que tanto el sofa y la mesa de centro mas caras entre ambas paginas, estan ofrecidos en la pagina de Hites, mientras que caso contrario pasa con Homcenter, la cual tiene en su pagina el sofa y la mesa mas economicos.

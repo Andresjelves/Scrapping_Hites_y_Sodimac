@@ -347,6 +347,8 @@ typeof(SODIMACSofaTabla[,2])
 ################################################################################
 ################### DISEÑO DEL PROYECTO UNIENDO AMBAS PAGINAS ################## 
 
+#nota: Cuando se haga mencion de la palabra "sillon", se refrira a "sofas"
+
 # Creando vectores que tendran el nombre de cada tienda
 
 HITES <- rep("Hites",24)
