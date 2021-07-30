@@ -1,5 +1,5 @@
-# Scrapping_Hites_y_Sodimac
-#Proyecto final de Big Data: Scrapping Hites y Sodimac
+
+# Proyecto final de Big Data: Scrapping Hites y Sodimac
 
 Integrantes: Camila Campos Salinas 
              Andrés Jelves 
@@ -328,7 +328,7 @@ HITESSofaTabla <- rename(HITESSofaTabla, "Nombre del producto" = "Nombre product
 SILLONES <- rbind(HITESSofaTabla,SODIMACSofaTabla)
 MESAS <- rbind(HITESMesaTabla,SODIMACMesaTabla)
 
-## Análisis correspondiente estadístico
+## Análisis estadístico correspondiente
 ##### Se forma el análisis finalmente de los datos estadísticos de acuerdo con Hites e Sodimac, cabe destacar que se hará una comparativa entre los productos, tanto de sofás y Mesas, visualizando si los precios que estos imponen son más accesibles en sus valores, es decir, si son caros o baratos. 
 ### Sofás
 ##### Se hará un promedio de valores de cada uno de los elementos en este caso de los sofás (Sillones), correspondientes a ambas páginas. 
@@ -363,3 +363,5 @@ SillonCaroBarato <- function(b){
       TiendaCara <- c(TiendaCara,SILLONES[z,3])
     }
   }
+## Conclusión
+#####

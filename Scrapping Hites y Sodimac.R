@@ -384,6 +384,7 @@ MESAS <- rbind(HITESMesaTabla,SODIMACMesaTabla)
 
 # # # # # # # # # # # # # # CÁLCULO ESTADÍSTICO # # # # # # # # # # # # # # # #
 
+# Calculo de media y desviacion estandad de los sofas
 # Valor promedio de los sofas de Hites
 PromedioSillonHites <- mean(HITESSofaTabla[,2])
 print(paste("El promedio de los sillones en Hites es de", "$",PromedioSillonHites))
@@ -392,14 +393,6 @@ print(paste("El promedio de los sillones en Hites es de", "$",PromedioSillonHite
 DevSillonHites <- sd(HITESSofaTabla[,2])
 print(paste("La desviación estandar de los sofas de Hites es de",DevSillonHites))
 
-# Valor promedio de las mesas de Hites
-PromedioMesasHites <- mean(HITESMesaTabla [,2])
-print(paste("El promedio de los mesas en Hites es de", "$",PromedioMesasHites))
-
-# Desviacion de los mesas de Hites
-DevMesasHites <- sd(HITESMesaTabla[,2])
-print(paste("La desviación estandar de los mesas de Hites es de",DevMesasHites))
-
 # Valor promedio de los sofas de Sodimac
 PromediosSillonesSodimac <- mean(SODIMACSofaTabla[,2])
 print(paste("El promedio de los sillones en Sodimac es de", "$",PromediosSillonesSodimac))
@@ -407,6 +400,16 @@ print(paste("El promedio de los sillones en Sodimac es de", "$",PromediosSillone
 # Desviacion de los sofas de Sodimac
 DevSillonSodimac <- sd(SODIMACSofaTabla[,2])
 print(paste("La desviación estandar de los sofas de Sodimac es de",DevSillonSodimac))
+
+
+# Calculo de media y desviacion estandad de las mesas
+# Valor promedio de las mesas de Hites
+PromedioMesasHites <- mean(HITESMesaTabla [,2])
+print(paste("El promedio de los mesas en Hites es de", "$",PromedioMesasHites))
+
+# Desviacion de los mesas de Hites
+DevMesasHites <- sd(HITESMesaTabla[,2])
+print(paste("La desviación estandar de los mesas de Hites es de",DevMesasHites))
 
 # Valor promedio de las mesas de Sodimac
 PromediosMesasSodimac <- mean(SODIMACMesaTabla[,2])
