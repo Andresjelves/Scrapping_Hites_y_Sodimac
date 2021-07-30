@@ -485,3 +485,4 @@ print(paste("La desviación estandar de los sofas es de",DevSillon))
 
 DevMesas <- sd(MESAS[,2])
 print(paste("La desviación estandar de las mesas es de",DevMesas))
+
