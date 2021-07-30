@@ -347,7 +347,7 @@ print(paste("El promedio de los sillones en Sodimac es de", "$",PromediosSillone
 
 ##### En el presente análisis dependiendo del promedio de la lista de sofás (sillones) de la tienda Sodimac, se pudo recabar que su valor con respecto a la media es de $292.130 pesos chilenos. 
 
-##### Por consiguiente se encontrará que tienda contiene la valoración más cara o la valoración más barata acorde a los productos de sofá, perteneciente a cada una de las tiendas de estudio. 
+##### Por consiguiente se encontrará que tienda contiene la valoración más cara y la valoración más barata acorde a los productos de sofá, perteneciente a cada una de las tiendas de estudio. 
 
 SillonCaroBarato <- function(b){
   ##### Calculando el valor maximo
@@ -363,5 +363,11 @@ SillonCaroBarato <- function(b){
       TiendaCara <- c(TiendaCara,SILLONES[z,3])
     }
   }
+  
 ## Conclusión
-#####
+##### Ya con todos los analisis efectuados se puden desprender una seguidilla de aseveraciones como forma de conclusión. La primera es que los promedios de los productos mesas de centro y sofas, presentes en la pagina de hites, son en promedio superior a los que se ofrecen en la pagina de la empresa Sodimac, mismo comportamiento que se presento en sus desviaciones estandar respectivas, donde Hites presentava valores en sus precios mucho mas dispersos que en Sodimac.
+##### Para confirmar lo que se aprecia en el parafo anterior, tambien se tiene presente que tanto el sofa y la mesa de centro mas caras entre ambas paginas, estan ofrecidos en la pagina de Hites, mientras que caso contrario pasa con Homcenter, la cual tiene en su pagina el sofa y la mesa mas economicos.
+##### Finalmente se puede mencionar que si algun comprador que esta buscando sofas y/o mesas de centro le importa encontrar estos productos mas economicos, la desicion correcta seria ir directamente a comprarlos a la tienda de Homcenter, producto de que sus precios son mas bajos. Caso contrario si al comprador el dinero no le fuera un factor relevante dentro de la compra de alguno de ambos productos, en esta situacion la decicion seria netamente por preferencias.
+##### A modo de recomendacion, para darle un cierre a este proyecto de forma mas categorica, seria una buena idea desarrollar el total de las categorias de productos que se comparta entre las paginas Hites y Sodimac, para de esta forma tener certera de si Sodimac es mas economico en la totalidad en comparación con Hites o si esta ultima tiene alguna categoria que sea mas economica en comparacion con la primera.
+
+
